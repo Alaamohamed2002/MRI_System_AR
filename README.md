@@ -6,7 +6,7 @@ MRI System – Django Web Project
 This is a Django-based MRI analysis web application that allows doctors to upload MRI images and manage patient data. The system supports Arabic localization and features custom login using name and national ID.
 
 ---------------------------------------
-🚀 Setup Instructions
+ Setup Instructions
 ---------------------------------------
 
 1. Clone the Repository
@@ -41,21 +41,21 @@ Install the required packages:
 ---------------------------------------
 If you're using Django translation files (`.po`, `.mo`) for Arabic language support:
 
-✔ Make sure `gettext` is installed on your system if you need to recompile translations.
+ Make sure `gettext` is installed on your system if you need to recompile translations.
 
-📥 Download gettext (Windows):
+ Download gettext (Windows):
 https://mlocati.github.io/articles/gettext-iconv-windows.html
 
-🛠 Add gettext `bin` folder to your system PATH.
+ Add gettext `bin` folder to your system PATH.
 
-✅ To compile translations (if needed):
+To compile translations (if needed):
 
     python manage.py compilemessages
 
-📌 Note: This is only required if `.mo` files are missing or `.po` files are updated.
+ Note: This is only required if `.mo` files are missing or `.po` files are updated.
 
 ---------------------------------------
-🛠 Run the Development Server
+ Run the Development Server
 ---------------------------------------
 
     python manage.py runserver
@@ -65,7 +65,7 @@ Then open your browser and go to:
     http://127.0.0.1:8000/
 
 ---------------------------------------
-🧠 Project Structure Highlights
+ Project Structure Highlights
 ---------------------------------------
 
 - `Brainapp/`        – main Django app (models, views, etc.)
