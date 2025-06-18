@@ -1,52 +1,78 @@
+MRI System – Django Web Project
+=======================================
 
-# ߧ MRI_Analysis - Django Web Application
+📁 Project Overview
+---------------------------------------
+This is a Django-based MRI analysis web application that allows doctors to upload MRI images and manage patient data. The system supports Arabic localization and features custom login using name and national ID.
 
-**MRI_Analysis** is a Django-based web application designed for local development using a virtual environment, SQLite database, and support for media uploads.
+---------------------------------------
+🚀 Setup Instructions
+---------------------------------------
 
-## ߓ Tech Stack
-- Python 3.8+
-- Django 5.1.3
-- SQLite (default database)
-- Pillow (image processing)
-- Django Extensions (for helpful dev tools)
+1. Clone the Repository
+------------------------------
+    git clone https://github.com/Alaamohamed2002/MRI_System_AR.git
+    
 
-##  ߚGetting Started
+2. Create and Activate a Virtual Environment
+------------------------------
+If `env` folder doesn't exist, create it:
 
-### 1. Activate Virtual Environment
-    env\Scripts\activate
-
-> If `env` doesn't exist, create it first:
     python -m venv env
-    env\Scripts\activate
 
-### 2. Install Dependencies
+Activate the environment:
+
+    On Windows:
+        env\Scripts\activate
+    On macOS/Linux:
+        source env/bin/activate
+
+3. Install Dependencies
+------------------------------
+Install the required packages:
+
     pip install django
     pip install pillow
     pip install django-extensions
 
-### 3. Run Migrations
-    python manage.py makemigrations
-    python manage.py migrate
 
-### 4. Create Superuser (optional)
-    python manage.py createsuperuser
+---------------------------------------
+🌐 Arabic Localization (i18n)
+---------------------------------------
+If you're using Django translation files (`.po`, `.mo`) for Arabic language support:
 
-### 5. Run Development Server
+✔ Make sure `gettext` is installed on your system if you need to recompile translations.
+
+📥 Download gettext (Windows):
+https://mlocati.github.io/articles/gettext-iconv-windows.html
+
+🛠 Add gettext `bin` folder to your system PATH.
+
+✅ To compile translations (if needed):
+
+    python manage.py compilemessages
+
+📌 Note: This is only required if `.mo` files are missing or `.po` files are updated.
+
+---------------------------------------
+🛠 Run the Development Server
+---------------------------------------
+
     python manage.py runserver
 
-Visit the app at: http://127.0.0.1:8000
+Then open your browser and go to:
+
+    http://127.0.0.1:8000/
+
+---------------------------------------
+🧠 Project Structure Highlights
+---------------------------------------
+
+- `Brainapp/`        – main Django app (models, views, etc.)
+- `templates/`       – HTML template files
+- `locale/`          – translation files (Arabic `.po`/`.mo`)
+- `media/`           – uploaded MRI image files
+- `frontend/`        – optional React frontend (if applicable)
 
 
 
-## ߓ Resources
-- https://docs.djangoproject.com/en/5.1/
-
-- https://pillow.readthedocs.io/
-- https://django-extensions.readthedocs.io/
-
-## ✅ Final Notes
-- Always activate the environment before running the server.
-- Use `python manage.py` commands inside the `BrainProject` folder.
-- Admin login: http://127.0.0.1:8000/admin
-
-Happy Coding! ߚ
