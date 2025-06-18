@@ -1,0 +1,361 @@
+:root {
+    --primary-color: #e6f4f9;
+    --secondary-color: #2c7a9c;
+    --accent-color: #00a896;
+    --text-color: #333;
+    --background-color: #fff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+    --primary-color: #1a2b3c;
+    --secondary-color: #4a90e2;
+    --accent-color: #00d4b1;
+    --text-color: #fff;
+    --background-color: #121212;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure html and body take full viewport height */
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+.admin-link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .admin-link:hover,
+  .admin-link:active {
+    color: #00a896;
+  }  
+
+/* Main container for login page */
+.container {
+    min-height: 100vh; /* Ensure it takes at least full viewport height */
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Keep padding around the content */
+    width: 100%; /* Ensure it takes full width to allow centering */
+}
+
+/* Login Card Styles */
+.login-card {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* A bit smaller than 900px */
+    animation: fadeIn 0.5s ease-in;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.login-header h1 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color var(--transition-speed);
+}
+
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Button Styles */
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    background-color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-card {
+        max-width: 90%; /* Adjust max-width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem;
+        max-width: 95%; /* Adjust for smaller phones */
+    }
+    
+    .login-header i {
+        font-size: 2.5rem;
+    }
+    
+    .login-header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon i {
+    position: absolute;
+    right: 12px;
+    color: #009688; /* The specified green color */
+    font-size: 1.1rem;
+}
+
+.input-with-icon input,
+.input-with-icon select,
+.input-with-icon textarea {
+    padding-right: 40px; /* Ensure space for the icon */
+    width: 100%;
+}
+
+.input-with-icon textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Remove incrementer from number input (from previous user request) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Dark mode styles for input icons */
+[data-theme="dark"] .input-with-icon i {
+    color: #009688; /* The specified green color in dark mode */
+}
+
+.gender-select {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.gender-option {
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.gender-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.gender-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.gender-icon i {
+    font-size: 1rem;
+}
+
+.gender-label {
+    display: block;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-weight: 500;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+.gender-option input[type="radio"]:checked + .gender-icon {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.gender-option input[type="radio"]:checked + .gender-icon + .gender-label {
+    color: #007bff;
+}
+
+.gender-option--male input[type="radio"]:checked + .gender-icon {
+    background-color: #007bff; /* Blue for male */
+    border-color: #007bff;
+}
+
+.gender-option--male input[type="radio"]:checked + .gender-icon + .gender-label {
+    color: #007bff;
+}
+
+.gender-option--female input[type="radio"]:checked + .gender-icon {
+    background-color: #ff69b4; /* Pink for female */
+    border-color: #ff69b4;
+}
+
+.gender-option--female input[type="radio"]:checked + .gender-icon + .gender-label {
+    color: #ff69b4;
+}
+
+.gender-option:hover .gender-icon {
+    border-color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .gender-icon {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+[data-theme="dark"] .gender-label {
+    color: #e9ecef;
+}
+
+[data-theme="dark"] .gender-option--male input[type="radio"]:checked + .gender-icon {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+[data-theme="dark"] .gender-option--female input[type="radio"]:checked + .gender-icon {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+}
+
+[data-theme="dark"] .gender-option:hover .gender-icon {
+    border-color: #007bff;
+}
+
+/* Login Page specific styles */
+.login-body {
+    position: relative; /* For absolute positioning of the toggle */
+    min-height: 100vh;
+}
+
+.login-theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.login-theme-toggle label {
+    cursor: pointer;
+    font-size: 1.5rem; /* Larger icon */
+    color: var(--text-color); /* Inherit text color for icon */
+    transition: color 0.3s ease;
+}
+
+.login-theme-toggle input[type="checkbox"] {
+    display: none; /* Hide the actual checkbox */
+}
+
+.login-theme-toggle input[type="checkbox"]:checked + label .fa-moon {
+    color: var(--accent-color); /* Change color when dark mode is active */
+}
+
+.login-theme-toggle input[type="checkbox"]:not(:checked) + label .fa-moon {
+    color: #ffd700; /* Yellow for light mode sun/moon icon */
+}
+
+/* Dark mode styles for the new login toggle */
+[data-theme="dark"] .login-theme-toggle label {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .login-theme-toggle input[type="checkbox"]:checked + label .fa-moon {
+    color: #f1c40f; /* Yellow for dark mode moon icon */
+}
+
+[data-theme="dark"] .login-theme-toggle input[type="checkbox"]:not(:checked) + label .fa-moon {
+    color: #95a5a6; /* Grey for light mode moon icon in dark theme */
+} 

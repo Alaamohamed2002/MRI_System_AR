@@ -1,0 +1,114 @@
+{% load static%} {% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:'en' }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Doctor Dashboard - MRI System" %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .language-selector {
+            margin-left: 15px;
+            margin-right: 0;
+        }
+        
+        .language-selector select {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #007bff;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .language-selector select:hover {
+            background: rgba(255, 255, 255, 1);
+            border-color: #0056b3;
+        }
+        
+        .language-selector select:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        }
+        
+        [dir="rtl"] .language-selector {
+            margin-left: 0;
+            margin-right: 15px;
+        }
+        
+        .dark-mode .language-selector select {
+            background: rgba(40, 44, 52, 0.9);
+            border-color: #61dafb;
+            color: #fff;
+        }
+        
+        .dark-mode .language-selector select:hover {
+            background: rgba(40, 44, 52, 1);
+            border-color: #4fa8c5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <i class="fas fa-brain"></i>
+                <h1>{% trans "MRI System" %}</h1>
+            </div>
+            <div class="header-right">
+                <div class="settings-dropdown">
+                    <button class="settings-btn">
+                        <i class="fas fa-gear"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="theme-toggle">
+                            <label for="darkMode">{% trans "Dark Mode" %}</label>
+                            <input type="checkbox" id="darkMode">
+                        </div>
+                        <button id="logoutBtn" class="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            {% trans "Logout" %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="welcome-section">
+                <h2>{% trans "Welcome" %}, <span>{{ staff_name }}</span></h2>
+                <p>{% trans "Please select an action below" %}</p>
+            </div>
+
+            <div class="action-cards">
+                <a href="{% url 'mri_analysis' %}" class="action-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>{% trans "MRI Analysis" %}</h3>
+                    <p>{% trans "Analyze MRI images and generate reports" %}</p>
+                </a>
+
+                <a href="{% url 'patient_data' %}" class="action-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>{% trans "Show Patient Data" %}</h3>
+                    <p>{% trans "View and edit patient reports" %}</p>
+                </a>
+
+                <a href="{% url 'contact_dev'  %}" class="action-card">
+                    <i class="fas fa-code"></i>
+                    <h3>{% trans "Contact Developer" %}</h3>
+                    <p>{% trans "Report issues or request features" %}</p>
+                </a>
+            </div>
+        </main>
+    </div>
+    <script src="{% static 'js/doctor.js' %}"></script>
+</body>
+
+</html>

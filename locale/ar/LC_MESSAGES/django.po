@@ -1,0 +1,490 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-18 21:17+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\Brainapp\models.py:9
+msgid "Admin"
+msgstr "مدير"
+
+#: .\Brainapp\models.py:10 .\Brainapp\models.py:58 .\Brainapp\models.py:75
+#: .\Brainapp\models.py:98
+msgid "Doctor"
+msgstr "طبيب"
+
+#: .\Brainapp\models.py:11 .\Brainapp\models.py:78 .\Brainapp\models.py:91
+msgid "Patient"
+msgstr "مريض"
+
+#: .\Brainapp\models.py:14
+msgid "Phone number must be 10 to 15 digits."
+msgstr "يجب أن يكون رقم الهاتف من 10 إلى 15 رقم."
+
+#: .\Brainapp\models.py:17
+msgid "National ID must be exactly 14 digits."
+msgstr "يجب أن يكون الرقم القومي 14 رقم بالضبط."
+
+#: .\Brainapp\models.py:24 .\Brainapp\templates\Brainapp\signup-patient.html:71
+msgid "National ID"
+msgstr "الرقم القومي"
+
+#: .\Brainapp\models.py:26 .\Brainapp\templates\Brainapp\patient-data.html:87
+msgid "Name"
+msgstr "الاسم"
+
+#: .\Brainapp\models.py:27
+msgid "Role"
+msgstr "الدور"
+
+#: .\Brainapp\models.py:32
+#: .\Brainapp\templates\Brainapp\signup-patient.html:120
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: .\Brainapp\models.py:35 .\Brainapp\templates\Brainapp\patient-data.html:95
+#: .\Brainapp\templates\Brainapp\signup-patient.html:112
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: .\Brainapp\models.py:43 .\Brainapp\models.py:52 .\Brainapp\models.py:117
+msgid "User"
+msgstr "المستخدم"
+
+#: .\Brainapp\models.py:44
+msgid "Specialty"
+msgstr "التخصص"
+
+#: .\Brainapp\models.py:51
+#: .\Brainapp\templates\Brainapp\signup-patient.html:101
+msgid "Male"
+msgstr "ذكر"
+
+#: .\Brainapp\models.py:51
+#: .\Brainapp\templates\Brainapp\signup-patient.html:106
+msgid "Female"
+msgstr "أنثى"
+
+#: .\Brainapp\models.py:60 .\Brainapp\templates\Brainapp\signup-patient.html:96
+msgid "Gender"
+msgstr "الجنس"
+
+#: .\Brainapp\models.py:62 .\Brainapp\templates\Brainapp\patient-data.html:91
+#: .\Brainapp\templates\Brainapp\signup-patient.html:88
+msgid "Age"
+msgstr "العمر"
+
+#: .\Brainapp\models.py:81
+msgid "Image"
+msgstr "الصورة"
+
+#: .\Brainapp\models.py:83 .\Brainapp\models.py:101 .\Brainapp\models.py:126
+msgid "Date"
+msgstr "التاريخ"
+
+#: .\Brainapp\models.py:88
+msgid "MRI Image"
+msgstr "صورة التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\models.py:100
+msgid "Report"
+msgstr "التقرير"
+
+#: .\Brainapp\models.py:106 .\Brainapp\templates\Brainapp\contact-dev.html:70
+msgid "Bug Report"
+msgstr "تقرير خطأ"
+
+#: .\Brainapp\models.py:107 .\Brainapp\templates\Brainapp\contact-dev.html:71
+msgid "Feature Request"
+msgstr "طلب ميزة جديدة"
+
+#: .\Brainapp\models.py:108 .\Brainapp\templates\Brainapp\contact-dev.html:72
+msgid "System Improvement"
+msgstr "تحسين النظام"
+
+#: .\Brainapp\models.py:109 .\Brainapp\templates\Brainapp\contact-dev.html:73
+msgid "Other"
+msgstr "أخرى"
+
+#: .\Brainapp\models.py:112 .\Brainapp\templates\Brainapp\contact-dev.html:91
+msgid "Low"
+msgstr "منخفضة"
+
+#: .\Brainapp\models.py:113 .\Brainapp\templates\Brainapp\contact-dev.html:92
+msgid "Medium"
+msgstr "متوسطة"
+
+#: .\Brainapp\models.py:114 .\Brainapp\templates\Brainapp\contact-dev.html:93
+msgid "High"
+msgstr "عالية"
+
+#: .\Brainapp\models.py:115 .\Brainapp\templates\Brainapp\contact-dev.html:94
+msgid "Urgent"
+msgstr "عاجلة"
+
+#: .\Brainapp\models.py:119 .\Brainapp\templates\Brainapp\contact-dev.html:67
+msgid "Issue Type"
+msgstr "نوع المشكلة"
+
+#: .\Brainapp\models.py:121 .\Brainapp\templates\Brainapp\contact-dev.html:78
+msgid "Issue Title"
+msgstr "عنوان المشكلة"
+
+#: .\Brainapp\models.py:123 .\Brainapp\templates\Brainapp\contact-dev.html:88
+msgid "Priority Level"
+msgstr "مستوى الأولوية"
+
+#: .\Brainapp\models.py:125
+msgid "Message"
+msgstr "الرسالة"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:8
+msgid "Contact Developer - MRI System"
+msgstr "تواصل مع المطور - نظام التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:19
+#: .\Brainapp\templates\Brainapp\doctor-home.html:19
+#: .\Brainapp\templates\Brainapp\index.html:26
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:21
+#: .\Brainapp\templates\Brainapp\patient-data.html:21
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:19
+#: .\Brainapp\templates\Brainapp\signup-patient.html:21
+msgid "MRI System"
+msgstr "نظام التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:28
+#: .\Brainapp\templates\Brainapp\doctor-home.html:28
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:30
+#: .\Brainapp\templates\Brainapp\patient-data.html:30
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:28
+#: .\Brainapp\templates\Brainapp\signup-patient.html:30
+msgid "Dark Mode"
+msgstr "الوضع المظلم"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:33
+#: .\Brainapp\templates\Brainapp\doctor-home.html:33
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:35
+#: .\Brainapp\templates\Brainapp\patient-data.html:35
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:33
+#: .\Brainapp\templates\Brainapp\signup-patient.html:35
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:48
+#: .\Brainapp\templates\Brainapp\contact-dev.html:52
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:45
+#: .\Brainapp\templates\Brainapp\patient-data.html:46
+#: .\Brainapp\templates\Brainapp\patient-data.html:50
+#: .\Brainapp\templates\Brainapp\signup-patient.html:45
+msgid "Back to Dashboard"
+msgstr "العودة إلى لوحة التحكم"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:55
+#: .\Brainapp\templates\Brainapp\doctor-home.html:61
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:61
+msgid "Contact Developer"
+msgstr "تواصل مع المطور"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:62
+#: .\Brainapp\templates\Brainapp\index.html:42
+msgid "Staff ID"
+msgstr "رقم الموظف"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:69
+msgid "Select issue type"
+msgstr "اختر نوع المشكلة"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:79
+msgid "Brief description of the issue"
+msgstr "وصف مختصر للمشكلة"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:83
+msgid "Issue Description"
+msgstr "وصف المشكلة"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:84
+msgid "Please provide detailed information about the issue"
+msgstr "يرجى تقديم معلومات مفصلة عن المشكلة"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:90
+msgid "Select priority"
+msgstr "اختر الأولوية"
+
+#: .\Brainapp\templates\Brainapp\contact-dev.html:100
+msgid "Submit Issue"
+msgstr "إرسال المشكلة"
+
+#: .\Brainapp\templates\Brainapp\doctor-home.html:8
+msgid "Doctor Dashboard - MRI System"
+msgstr "لوحة تحكم الطبيب - نظام التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\doctor-home.html:42
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:42
+msgid "Welcome"
+msgstr "مرحباً"
+
+#: .\Brainapp\templates\Brainapp\doctor-home.html:43
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:43
+msgid "Please select an action below"
+msgstr "يرجى اختيار إجراء من أدناه"
+
+#: .\Brainapp\templates\Brainapp\doctor-home.html:49
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:47
+msgid "MRI Analysis"
+msgstr "تحليل التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\doctor-home.html:50
+msgid "Analyze MRI images and generate reports"
+msgstr "تحليل صور التصوير بالرنين المغناطيسي وإنشاء التقارير"
+
+#: .\Brainapp\templates\Brainapp\doctor-home.html:55
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:55
+msgid "Show Patient Data"
+msgstr "عرض بيانات المريض"
+
+#: .\Brainapp\templates\Brainapp\doctor-home.html:56
+msgid "View and edit patient reports"
+msgstr "عرض وتحرير تقارير المرضى"
+
+#: .\Brainapp\templates\Brainapp\doctor-home.html:62
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:62
+msgid "Report issues or request features"
+msgstr "الإبلاغ عن المشاكل أو طلب ميزات جديدة"
+
+#: .\Brainapp\templates\Brainapp\index.html:8
+msgid "MRI System - Login"
+msgstr "نظام التصوير بالرنين المغناطيسي - تسجيل الدخول"
+
+#: .\Brainapp\templates\Brainapp\index.html:17
+msgid "Toggle Dark Mode"
+msgstr "تبديل الوضع المظلم"
+
+#: .\Brainapp\templates\Brainapp\index.html:27
+msgid "Staff Login"
+msgstr "تسجيل دخول الموظفين"
+
+#: .\Brainapp\templates\Brainapp\index.html:34
+#: .\Brainapp\templates\Brainapp\patient-data.html:62
+#: .\Brainapp\templates\Brainapp\signup-patient.html:56
+msgid "Close"
+msgstr "إغلاق"
+
+#: .\Brainapp\templates\Brainapp\index.html:44
+msgid "Enter your staff ID"
+msgstr "أدخل رقم الموظف الخاص بك"
+
+#: .\Brainapp\templates\Brainapp\index.html:49
+msgid "Staff Name"
+msgstr "اسم الموظف"
+
+#: .\Brainapp\templates\Brainapp\index.html:51
+msgid "Enter your full name"
+msgstr "أدخل اسمك الكامل"
+
+#: .\Brainapp\templates\Brainapp\index.html:56
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: .\Brainapp\templates\Brainapp\issue_success.html:8
+msgid "Success - MRI System"
+msgstr "نجح - نظام التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\issue_success.html:76
+msgid "Issue Submitted Successfully"
+msgstr "تم إرسال المشكلة بنجاح"
+
+#: .\Brainapp\templates\Brainapp\issue_success.html:77
+msgid "Thank you for contacting the developer. Your issue has been recorded."
+msgstr "شكراً لك على التواصل مع المطور. تم تسجيل مشكلتك."
+
+#: .\Brainapp\templates\Brainapp\issue_success.html:80
+msgid "Back to Admin Dashboard"
+msgstr "العودة إلى لوحة تحكم المدير"
+
+#: .\Brainapp\templates\Brainapp\issue_success.html:84
+msgid "Back to Doctor Dashboard"
+msgstr "العودة إلى لوحة تحكم الطبيب"
+
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:8
+msgid "MRI Analysis - MRI System"
+msgstr "تحليل التصوير بالرنين المغناطيسي - نظام التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:63
+#: .\Brainapp\templates\Brainapp\patient-data.html:70
+msgid "Patient ID"
+msgstr "رقم المريض"
+
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:64
+#: .\Brainapp\templates\Brainapp\patient-data.html:72
+msgid "Enter patient ID"
+msgstr "أدخل رقم المريض"
+
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:68
+msgid "Upload MRI Image"
+msgstr "رفع صورة التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:73
+msgid "Choose File"
+msgstr "اختر ملف"
+
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:75
+msgid "No file chosen"
+msgstr "لم يتم اختيار ملف"
+
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:80
+msgid "MRI Preview"
+msgstr "معاينة التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\mri-analysis.html:85
+msgid "Analyze MRI"
+msgstr "تحليل التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\patient-data.html:8
+msgid "Patient Data - MRI System"
+msgstr "بيانات المريض - نظام التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\patient-data.html:53
+msgid "Patient Data"
+msgstr "بيانات المريض"
+
+#: .\Brainapp\templates\Brainapp\patient-data.html:75
+msgid "Search"
+msgstr "بحث"
+
+#: .\Brainapp\templates\Brainapp\patient-data.html:84
+msgid "Patient Information"
+msgstr "معلومات المريض"
+
+#: .\Brainapp\templates\Brainapp\patient-data.html:99
+msgid "Phone"
+msgstr "الهاتف"
+
+#: .\Brainapp\templates\Brainapp\patient-data.html:105
+#: .\Brainapp\templates\Brainapp\patient-data.html:123
+msgid "No patient data found"
+msgstr "لم يتم العثور على بيانات المريض"
+
+#: .\Brainapp\templates\Brainapp\patient-data.html:114
+msgid "Medical Reports"
+msgstr "التقارير الطبية"
+
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:8
+msgid "Receptionist Dashboard - MRI System"
+msgstr "لوحة تحكم الاستقبال - نظام التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:49
+#: .\Brainapp\templates\Brainapp\signup-patient.html:47
+msgid "Sign Up Patient"
+msgstr "تسجيل مريض جديد"
+
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:50
+msgid "Register new patients in the system"
+msgstr "تسجيل مرضى جدد في النظام"
+
+#: .\Brainapp\templates\Brainapp\receptionist-home.html:56
+msgid "View and search patient records"
+msgstr "عرض والبحث في سجلات المرضى"
+
+#: .\Brainapp\templates\Brainapp\signup-patient.html:8
+msgid "Sign Up Patient - MRI System"
+msgstr "تسجيل مريض جديد - نظام التصوير بالرنين المغناطيسي"
+
+#: .\Brainapp\templates\Brainapp\signup-patient.html:64
+msgid "UserName"
+msgstr "اسم المستخدم"
+
+#: .\Brainapp\templates\Brainapp\signup-patient.html:66
+msgid "Enter patient's Username"
+msgstr "أدخل اسم المستخدم للمريض"
+
+#: .\Brainapp\templates\Brainapp\signup-patient.html:73
+msgid "Enter patient's National_id"
+msgstr "أدخل الرقم القومي للمريض"
+
+#: .\Brainapp\templates\Brainapp\signup-patient.html:80
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#: .\Brainapp\templates\Brainapp\signup-patient.html:82
+msgid "Enter patient's full name"
+msgstr "أدخل الاسم الكامل للمريض"
+
+#: .\Brainapp\templates\Brainapp\signup-patient.html:88
+msgid "Enter patient's age"
+msgstr "أدخل عمر المريض"
+
+#: .\Brainapp\templates\Brainapp\signup-patient.html:112
+msgid "Enter patient's email"
+msgstr "أدخل البريد الإلكتروني للمريض"
+
+#: .\Brainapp\templates\Brainapp\signup-patient.html:122
+msgid "Enter patient's phone number"
+msgstr "أدخل رقم الهاتف للمريض"
+
+#: .\Brainapp\templates\Brainapp\signup-patient.html:129
+msgid "Register Patient"
+msgstr "تسجيل المريض"
+
+#: .\Brainapp\views.py:26
+msgid "Email already exists."
+msgstr "البريد الإلكتروني موجود بالفعل."
+
+#: .\Brainapp\views.py:30
+msgid "Phone Number already exists."
+msgstr "رقم الهاتف موجود بالفعل."
+
+#: .\Brainapp\views.py:36
+msgid "National ID already exists."
+msgstr "الرقم القومي موجود بالفعل."
+
+#: .\Brainapp\views.py:59
+msgid "Patient registered successfully."
+msgstr "تم تسجيل المريض بنجاح."
+
+#: .\Brainapp\views.py:67
+#, python-format
+msgid "An error occurred: %(error)s"
+msgstr "حدث خطأ: %(error)s"
+
+#: .\Brainapp\views.py:92
+msgid "Invalid role. Please contact support."
+msgstr "دور غير صحيح. يرجى التواصل مع الدعم."
+
+#: .\Brainapp\views.py:99
+msgid "Invalid name or national ID."
+msgstr "اسم أو رقم قومي غير صحيح."
+
+#: .\Brainapp\views.py:130
+msgid "All fields are required."
+msgstr "جميع الحقول مطلوبة."
+
+#: .\Brainapp\views.py:139
+msgid "MRI uploaded successfully."
+msgstr "تم رفع التصوير بالرنين المغناطيسي بنجاح."
+
+#: .\Brainapp\views.py:143
+msgid "No User found with this National ID."
+msgstr "لم يتم العثور على مستخدم بهذا الرقم القومي."
+
+#: .\Brainapp\views.py:149 .\Brainapp\views.py:178
+msgid "This user is not registered as a patient."
+msgstr "هذا المستخدم غير مسجل كمريض."
+
+#: .\Brainapp\views.py:173
+msgid "No user with this National ID."
+msgstr "لا يوجد مستخدم بهذا الرقم القومي."

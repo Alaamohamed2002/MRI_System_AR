@@ -1,0 +1,114 @@
+{% load static%} {% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:'en' }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "MRI System - Login" %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: auto;
+            z-index: 1000;
+        }
+        
+        .language-selector select {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .language-selector select:hover {
+            background: rgba(255, 255, 255, 1);
+            border-color: #0056b3;
+            transform: translateY(-1px);
+        }
+        
+        .language-selector select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+        
+        [dir="rtl"] .language-selector {
+            left: auto;
+            right: 20px;
+        }
+        
+        .dark-mode .language-selector select {
+            background: rgba(40, 44, 52, 0.9);
+            border-color: #61dafb;
+            color: #fff;
+        }
+        
+        .dark-mode .language-selector select:hover {
+            background: rgba(40, 44, 52, 1);
+            border-color: #4fa8c5;
+        }
+    </style>
+</head>
+
+<body class="login-body">
+    <div class="theme-toggle login-theme-toggle">
+        <label for="darkModeLogin" title="{% trans 'Toggle Dark Mode' %}">
+            <i class="fas fa-moon"></i>
+        </label>
+        <input type="checkbox" id="darkModeLogin">
+    </div>
+    <div class="container">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fas fa-brain"></i>
+                <h1>{% trans "MRI System" %}</h1>
+                <p>{% trans "Staff Login" %}</p>
+            </div>
+            {% if messages %}
+            <div class="mt-3">
+                {% for message in messages %} {% if 'login' in message.tags %}
+                <div class="alert alert-dismissible fade show shadow-sm rounded" style="background-color: #f8c8dc; color: black; font-size: 1rem; font-weight: bold;" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="{% trans 'Close' %}"></button>
+                </div>
+                {% endif %} {% endfor %}
+            </div>
+            {% endif %}
+            <form method="POST" id="loginForm" class="login-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="staffId">{% trans "Staff ID" %}</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="staffId" name="national_id" required placeholder="{% trans 'Enter your staff ID' %}">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="staffName">{% trans "Staff Name" %}</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="staffName" name="name" required placeholder="{% trans 'Enter your full name' %}">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <span>{% trans "Login" %}</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

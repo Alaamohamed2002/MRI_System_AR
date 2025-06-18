@@ -1,0 +1,116 @@
+{% load static%} {% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:'en' }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Contact Developer - MRI System" %}</title>
+    <link rel="stylesheet" href="{%  static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <i class="fas fa-brain"></i>
+                <h1>{% trans "MRI System" %}</h1>
+            </div>
+            <div class="header-right">
+                <div class="settings-dropdown">
+                    <button class="settings-btn">
+                        <i class="fas fa-gear"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="theme-toggle">
+                            <label for="darkMode">{% trans "Dark Mode" %}</label>
+                            <input type="checkbox" id="darkMode">
+                        </div>
+                        <button id="logoutBtn" class="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                           {% trans "Logout" %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="page-header">
+                <!-- <a href="#"  class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Dashboard
+                </a> -->
+                {% if user.role == 'admin' %}
+                <a href="{% url 'Admin_dashboard' %}" class="admin-link">
+                    <i class="fas fa-arrow-left"></i> {% trans "Back to Dashboard" %}
+                </a>
+                {% else %}
+                <a href="{% url 'Doctor_dashboard' %}" class="admin-link">
+                    <i class="fas fa-arrow-left"></i> {% trans "Back to Dashboard" %}
+                </a>
+                {% endif %}
+                <h2>{% trans "Contact Developer" %}</h2>
+            </div>
+
+            <div class="content-card">
+                <form id="contactForm" class="contact-form" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="staffId">{% trans "Staff ID" %}</label>
+                        <input type="text" id="staffId" name="staffId" value="{{ request.user.national_id }}" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issueType">{% trans "Issue Type" %}</label>
+                        <select id="issueType" name="issueType" required>
+                            <option value="">{% trans "Select issue type" %}</option>
+                            <option value="Bug Report">{% trans "Bug Report" %}</option>
+                            <option value="Feature Request">{% trans "Feature Request" %}</option>
+                            <option value="System Imporvment">{% trans "System Improvement" %}</option>
+                            <option value="Other">{% trans "Other" %}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issueTitle">{% trans "Issue Title" %}</label>
+                        <input type="text" id="issueTitle" name="issueTitle" required placeholder="{% trans 'Brief description of the issue' %}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issueDescription">{% trans "Issue Description" %}</label>
+                        <textarea id="issueDescription" name="issueDescription" required placeholder="{% trans 'Please provide detailed information about the issue' %}"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">{% trans "Priority Level" %}</label>
+                        <select id="priority" name="priority_level" required>
+                            <option value="">{% trans "Select priority" %}</option>
+                            <option value="Low">{% trans "Low" %}</option>
+                            <option value="Medium">{% trans "Medium" %}</option>
+                            <option value="High">{% trans "High" %}</option>
+                            <option value="Urgent">{% trans "Urgent" %}</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        {% trans "Submit Issue" %}
+                    </button>
+                </form>
+                {% if messages %}
+                <div class="mt-3">
+                    {% for message in messages %}
+                    <div class="alert alert-danger">{{ message }}</div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </main>
+    </div>
+    <script src="{% static 'js/contact-dev.js'%}"></script>
+</body>
+
+</html>
